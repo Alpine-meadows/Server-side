@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.integer('memberId').notNullable().unsigned().references('member.id').onDelete('cascade');
     table.text('checkinDate').notNullable();
     table.text('checkoutDate').notNullable();
+    table.boolean('accepted').defaultTo(false);
   })
 };
 
