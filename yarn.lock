@@ -936,6 +936,10 @@ minimist@~1.1.0:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.0.tgz#6cfec6a495eca915d02600a67020ed994937252c"
+
 morgan@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.7.0.tgz#eb10ca8e50d1abe0f8d3dad5c0201d052d981c62"
@@ -975,6 +979,10 @@ node-pre-gyp@0.6.32:
     semver "~5.3.0"
     tar "~2.2.1"
     tar-pack "~3.3.0"
+
+nodemailer@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-3.1.7.tgz#1f03b649ef060f660b5413e47f77c24189a7dca3"
 
 nopt@~3.0.6:
   version "3.0.6"
