@@ -5,9 +5,7 @@ exports.up = function(knex, Promise) {
     table.text('email').unique().notNullable();
     table.text('firstName').notNullable();
     table.text('lastName').notNullable();
-    table.text('profilePic');
-    table.text('facebookId').unique().notNullable();
-    table.boolean('active').notNullable().defaultTo(true);
+    table.text('password').notNullable();
   })
 };
 

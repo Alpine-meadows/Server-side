@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const cors = require('cors');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+const user = require('./routes/user');
 const property = require ('./routes/properties');
 const reservation = require ('./routes/reservation');
 
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/signin', user);
 app.use('/property', property);
 app.use('/reservation', reservation);
 
