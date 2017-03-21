@@ -41,12 +41,8 @@ function ensureAuthenticated(req, res, next) {
         status: 'Token has expired'
       });
     } else {
-
-      return knex('member').where({id: parseInt(payload.member.id)}).first()
-      .then(()=>{
-        property.getProperties().then( data => {
-          res.json(data)
-        })
+      property.getProperties().then( data => {
+        res.json(data)
       })
       .catch((err) => {
         res.status(500).json({

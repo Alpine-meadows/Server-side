@@ -5,6 +5,7 @@ const rooms = require('../queries/rooms');
 const helper = require('../auth/_helpers');
 
 router.get('/', function(req, res, next) {
+  console.log(req.headers.Authorization);
   return helper.ensureAuthenticated(req, res, next)
 });
 router.get('/:propertyId/rooms', function(req, res, next) {

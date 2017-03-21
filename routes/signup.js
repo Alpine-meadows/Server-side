@@ -8,16 +8,12 @@ var localAuth = require('../auth/local')
 
 
 router.post('/', (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
-  let member;
-  return authHelpers.getMember(email)
+  let member
+  return authHelpers.createMember(req)
   .then((response) => {
     member = response;
-    authHelpers.comparePass(password, response.password);
-    return response;
+    return localAuth.encodeToken(response);
   })
-  .then((response) => { return localAuth.encodeToken(response); })
   .then((token) => {
     res.status(200).json({
       status: 'success',

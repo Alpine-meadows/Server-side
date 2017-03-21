@@ -8,6 +8,7 @@ const cors = require('cors');
 
 var index = require('./routes/index');
 const user = require('./routes/user');
+const signup = require('./routes/signup');
 const property = require ('./routes/properties');
 const reservation = require ('./routes/reservation');
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/signin', user);
+app.use('/signup', signup);
 app.use('/property', property);
 app.use('/reservation', reservation);
 
