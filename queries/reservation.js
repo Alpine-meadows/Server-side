@@ -17,7 +17,14 @@ function postReservation(reservation) {
   })
 }
 
+function getMemberReservation(memberId) {
+  return knex('reservation')
+  .where('memberId', memberId)
+  .returning('*')
+}
+
 
 module.exports = {
   postReservation,
+  getMemberReservation
 };
